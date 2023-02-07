@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home2() {
   return (
@@ -14,9 +15,12 @@ export default function Home2() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
+            <Link href={"/pagina2"}>pagina1</Link>
+            <Link href={"/pagina3"}>pagina3</Link>
             Get started by editing&nbsp;
             <code className={styles.code}>pages/index.tsx</code>
           </p>
@@ -26,7 +30,7 @@ export default function Home2() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{' '}
+              By{" "}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
@@ -119,5 +123,5 @@ export default function Home2() {
         </div>
       </main>
     </>
-  )
+  );
 }
